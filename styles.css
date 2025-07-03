@@ -1,0 +1,85 @@
+/* .table{
+    text-align: center;
+    background-color: red;
+    color: white;
+    width: 100%;
+} */
+
+/* ...existing code... */
+
+.div1 {
+    text-align: center;
+    background-color: red;
+    color: white;
+    width: 100%;
+    display: flex;           
+    flex-direction: row;     
+}
+
+.div3, .div4 {
+    text-align: center;
+    color: white;
+    width: 50%;
+    
+}
+
+.div3 {
+    background-color: green;
+}
+
+.div4 {
+    background-color: orange; 
+}
+.div2 {
+    text-align: center;
+    background-color: red;
+    color: white;
+    width: 100%;
+    display: flex;           
+    flex-direction: row;     
+}
+
+.div7, .div8,.div9 {
+    text-align: center;
+    color: white;
+    width: 50%;
+    
+}
+
+.div7 {
+    background-color: blue;
+}
+
+.div8 {
+    background-color: yellow; 
+}
+.div9 {
+    background-color: purple; 
+}
+
+.div13 {
+    text-align: center;
+    background-color: red;
+    color: white;
+    width: 100%;
+    display: flex;           
+    flex-direction: row;     
+}
+
+.div10, .div11,.div12 {
+    text-align: center;
+    color: white;
+    width: 50%;
+    
+}
+
+.div10 {
+    background-color: darksalmon;
+}
+
+.div11 {
+    background-color: indianred; 
+}
+.div12 {
+    background-color: palegreen; 
+}
