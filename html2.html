@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #f0f0f0;
+      padding: 20px;
+      border-right: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+    }
+
+    .sidebar ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar li {
+      margin-bottom: 10px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #333;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    header, footer {
+      background-color: #ddd;
+      padding: 10px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    nav ul a {
+      text-decoration: none;
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h3>Recent Posts</h3>
+    <ul>
+      <li><a href="#">Heavy rainfall alert</a></li>
+      <li><a href="#">Tesla launched in India</a></li>
+      <li><a href="#">Iphone 17 coming soon</a></li>
+    </ul>
+  </div>
+
+  <div class="main-content">
+    <header>
+      <h1>Welcome</h1>
+    </header>
+
+    <nav>
+      <ul><a href="#">Home</a></ul>
+    </nav>
+
+    <h4>Para 1</h4>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero iusto quisquam, commodi quae nam delectus tempora rerum repudiandae obcaecati aliquid ea doloremque laborum velit animi optio repellat dolore natus eos?
+    </p>
+
+    <h4>Para 2</h4>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero iusto quisquam, commodi quae nam delectus tempora rerum repudiandae obcaecati aliquid ea doloremque laborum velit animi optio repellat dolore natus eos?
+    </p>
+
+    <footer>
+      <p>&copy; 2025 My Website</p>
+    </footer>
+  </div>
+
+</body>
+</html>
