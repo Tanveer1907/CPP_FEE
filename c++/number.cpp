@@ -5,21 +5,12 @@ int main(){
     cout<<"Enter a number: ";
     cin>> n;
     cout<<"Number Analysis for "<<n<<":"<<endl;
-    if(n%2==0){
-        cout<<"Even: Yes"<<endl;
-    }
-    else{
-        cout<<"Even: No"<<endl;
-    }
-    if(n>0){
-        cout<<"Positive: Yes"<<endl;
-    }
-    else if(n<=0){
-        cout<<"Positive: No"<<endl;
-    }
-    if(n%3==0){
-        cout<<"Divisble by 3: Yes"<<endl;
-    }
-    else{}
+    cout<<"Even: "<<(n%2==0? "Yes":"No")<<endl;
+    cout<<"Positive: "<<(n>0? "Yes":"No")<<endl;
+    cout<<"Divisible by 3: "<<(n%3==0? "Yes":"No")<<endl;
+    cout<<"Divisible by 5: "<<(n%5==0? "Yes":"No")<<endl;
+    cout<<"Divisible by both 3 & 5: "<<(n%3==0 && n%5==0? "Yes":"No")<<endl;
+    cout<<"Single Digit: "<<(n>=0 && n<10? "Yes":"No")<<endl;
+    return 0;
     
 }
