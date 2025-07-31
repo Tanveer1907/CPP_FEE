@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>My Travel Blog</title>
+  <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/854/854878.png" type="image/png">
+  <style>
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  margin: 0;
+  background: linear-gradient(120deg, #e0f7fa 0%, #f2f9ff 40%, #b3e0ff 100%),
+              radial-gradient(circle at 80% 10%, #b3e0ff33 0%, transparent 70%),
+              radial-gradient(circle at 10% 90%, #0077b622 0%, transparent 80%);
+  background-blend-mode: lighten, normal, normal;
+  padding: 0;
+  color: #222;
+}
+    header {
+      background: linear-gradient(90deg, #004466 70%, #0077b6 100%);
+      color: white;
+      padding: 25px 40px 15px 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom-left-radius: 30px;
+      border-bottom-right-radius: 30px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin: 0 0 10px 0;
+      letter-spacing: 2px;
+      text-shadow: 1px 2px 8px #00334d44;
+    }
+    nav {
+      margin-top: 10px;
+      opacity: 0;
+      transform: translateY(-20px);
+      animation: navFadeIn 1.1s cubic-bezier(.4,0,.2,1) 0.2s forwards;
+    }
+    @keyframes navFadeIn {
+      to {
+        opacity: 1;
+        transform: none;
+      }
+    }
+    nav a {
+      color: #fff;
+      margin: 0 18px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.1rem;
+      padding: 6px 14px;
+      border-radius: 6px;
+      transition: background 0.2s, color 0.2s;
+    }
+    nav a {
+      position: relative;
+      overflow: hidden;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      width: 0;
+      height: 3px;
+      background: #fff;
+      border-radius: 2px;
+      transition: all 0.25s cubic-bezier(.4,0,.2,1);
+      transform: translateX(-50%);
+    }
+    nav a:hover {
+      background: #fff;
+      color: #0077b6;
+      box-shadow: 0 2px 8px #0077b633;
+      transform: scale(1.08);
+      z-index: 1;
+    }
+    nav a:hover::after {
+      width: 80%;
+      background: #0077b6;
+    }
+form {
+  /* Remove custom width for uniformity */
+}
+section {
+  max-width: 1300px;
+  width: 96vw;
+  margin: 40px auto 30px auto;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #0077b61a;
+  padding: 40px 48px 36px 48px;
+}
+/* Improved intro section styling */
+/* More spacious and visually appealing intro section */
+#intro {
+  background: linear-gradient(120deg, #e6f2ff 70%, #b3e0ff 100%);
+  padding: 60px 72px 60px 72px;
+  border-radius: 32px;
+  border: 1.5px solid #b3d1e6;
+  box-shadow: 0 8px 36px #0077b62a, 0 1.5px 0 #fff inset;
+  margin-bottom: 48px;
+  position: relative;
+  overflow: hidden;
+}
+/* Optional: subtle overlay for extra depth */
+#intro::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: linear-gradient(135deg, #fff6 0%, #e6f2ff00 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+    #intro {
+      padding: 0;
+    }
+    #intro .intro-flex {
+      display: flex;
+      align-items: center;
+      gap: 72px;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1;
+    }
+    #intro .intro-text {
+      flex: 1 1 400px;
+      min-width: 240px;
+      font-size: 1.35rem;
+      color: #00334d;
+      line-height: 1.85;
+      padding-right: 30px;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+    }
+    #intro .intro-img {
+      flex: 1 1 380px;
+      min-width: 400px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    #intro .intro-img img {
+      border-radius: 26px;
+      box-shadow: 0 8px 32px #0077b62a;
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+      margin-top: 0;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+      border: 2.5px solid #e6f2ff;
+      transition: max-width 0.3s cubic-bezier(.4,0,.2,1);
+    }
+    h2 {
+      color: #004466;
+      margin-bottom: 18px;
+      font-size: 2rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0 0 0;
+      background: #e6f2ff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 1px 8px #0077b61a;
+    }
+    table, th, td {
+      border: 1px solid #b3d1e6;
+    }
+    th {
+      background: #0077b6;
+      color: #fff;
+      font-weight: 700;
+    }
+    th, td {
+      padding: 12px 8px;
+      text-align: center;
+      font-size: 1.05rem;
+    }
+    
+    video {
+      border-radius: 12px;
+      margin-top: 10px;
+      box-shadow: 0 2px 12px #0077b61a;
+    }
+    audio {
+      display: none;
+    }
+    form {
+      margin-top: 20px;
+      background-color: #e6f2ff;
+      padding: 22px 18px 18px 18px;
+      border-radius: 10px;
+      box-shadow: 0 1px 8px #0077b61a;
+    }
+    label {
+      display: block;
+      margin-top: 14px;
+      font-weight: 500;
+      color: #004466;
+    }
+    input[type="text"], input[type="email"], select {
+      width: 100%;
+      padding: 8px 10px;
+      margin-top: 6px;
+      border: 1px solid #b3d1e6;
+      border-radius: 6px;
+      font-size: 1rem;
+      background: #f8fbff;
+      transition: border 0.2s;
+    }
+    input[type="text"]:focus, input[type="email"]:focus, select:focus {
+      border: 1.5px solid #0077b6;
+      outline: none;
+    }
+    input[type="radio"] {
+      margin-right: 7px;
+      accent-color: #0077b6;
+    }
+    input[type="submit"] {
+      margin-top: 18px;
+      background: linear-gradient(90deg, #0077b6 60%, #00b4d8 100%);
+      color: #fff;
+      border: none;
+      padding: 12px 32px;
+      border-radius: 8px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 2px 8px #0077b633;
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    input[type="submit"]:hover {
+      background: #004466;
+      box-shadow: 0 4px 16px #0077b655;
+    }
+    footer {
+      background: linear-gradient(90deg, #004466 70%, #0077b6 100%);
+      color: white;
+      padding: 18px 0 18px 0;
+      text-align: center;
+      border-top-left-radius: 30px;
+      border-top-right-radius: 30px;
+      margin-top: 40px;
+      box-shadow: 0 -2px 12px #0077b61a;
+      font-size: 1.1rem;
+    }
+    @media (max-width: 900px) {
+      section {
+        padding: 18px 6vw 18px 6vw;
+      }
+      header, footer {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      #intro .intro-flex {
+        flex-direction: column;
+        gap: 28px;
+      }
+      #intro .intro-img img {
+        max-width: 100%;
+        aspect-ratio: unset;
+      }
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      nav a {
+        font-size: 1rem;
+        margin: 0 7px;
+        padding: 4px 7px;
+      }
+      section {
+        padding: 10px 2vw 10px 2vw;
+      }
+      h2 {
+        font-size: 1.2rem;
+      }
+      table th, table td {
+        font-size: 0.95rem;
+        padding: 7px 3px;
+      }
+      #intro .intro-flex {
+        flex-direction: column;
+        gap: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Around The Atlas✈️</h1>
+  <nav>
+    <a href="#intro">About</a>
+    <a href="#destinations">Destinations</a>
+    <a href="#video">My Trip</a>
+    <a href="#form">Plan Your Trip</a>
+  </nav>
+</header>
+
+<section id="intro">
+  <div class="intro-flex">
+    <div class="intro-text">
+      <p>Welcome to my travel blog — your gateway to discovering the world through my eyes. From serene beaches to bustling city streets, I capture not just destinations, but the experiences, stories, and emotions that make every journey unforgettable. Whether you’re a seasoned traveler or dreaming of your first adventure, you’ll find inspiration, tips, and tales that spark your wanderlust and bring new places to life.</p>
+    </div>
+    <div class="intro-img">
+      <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="Beach Travel">
+    </div>
+  </div>
+</section>
+
+<section id="destinations">
+  <h2>Top 3 Travel Destinations</h2>
+  <table>
+    <tr>
+      <th>Country</th>
+      <th>Best Time to Visit</th>
+      <th>Language</th>
+    </tr>
+    <tr>
+      <td>Japan</td>
+      <td>March - May</td>
+      <td>Japanese</td>
+    </tr>
+    <tr>
+      <td>Italy</td>
+      <td>April - June</td>
+      <td>Italian</td>
+    </tr>
+    <tr>
+      <td>New Zealand</td>
+      <td>November - February</td>
+      <td>English</td>
+    </tr>
+  </table>
+</section>
+
+
+
+<section id="video">
+  <h2>My Trip to Italy</h2>
+  <video width="100%" controls>
+    <source src="italy trip.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+<!-- Background Music -->
+<audio autoplay loop muted>
+  <source src="background music.mp3" type="audio/mpeg">
+  Your browser does not support the audio tag.
+</audio>
+
+<section id="form">
+  <h2>Plan Your Trip</h2>
+  <form>
+    <label for="fullname">Full Name:</label>
+    <input type="text" id="fullname" name="fullname" required>
+
+    <label for="destination">Destination:</label>
+    <select id="destination" name="destination">
+      <option value="japan">Japan</option>
+      <option value="italy">Italy</option>
+      <option value="nz">New Zealand</option>
+    </select>
+
+    <label>Type of Traveler:</label>
+    
+    <label for="solo"><input type="radio" id="solo" name="traveler" value="Solo">Solo</label>
+
+    
+    <label for="family"><input type="radio" id="family" name="traveler" value="Family">Family</label>
+    
+    <label for="adventure"><input type="radio" id="adventure" name="traveler" value="Adventure">Adventure</label>
+
+    <label for="email">Email ID:</label>
+    <input type="email" id="email" name="email" required>
+
+    <br><br>
+    <input type="submit" value="Submit">
+  </form>
+</section>
+
+<footer>
+  &copy; 2025 My Travel Blog. All rights reserved.
+</footer>
+
+</body>
+</html>
