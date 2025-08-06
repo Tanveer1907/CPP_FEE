@@ -1,11 +1,14 @@
 #include <iostream>
-namespace A {
-int val() { return 2; }
-}
-namespace B {
-int val() { return 5; }
-}
-int main() {
-std::cout << A::val() + B::val() << std::endl;
-return 0;
+using namespace std;
+class demo
+{
+    public:
+    static int counter;
+    demo() { counter++; }
+};
+int demo::counter=0;
+int main(){
+    demo a,b;
+    std::cout<<demo::counter<<std::endl;
+    return 0;
 }
