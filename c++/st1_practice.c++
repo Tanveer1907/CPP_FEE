@@ -329,3 +329,82 @@
 //     Circle c(7);
 //     cout << c.area(7);
 // }
+
+// #include <iostream>
+// using namespace std;
+// class Student{
+//     private:
+//     string name;
+//     int marks;
+
+//     public: 
+//     Student(string n, int m){
+//         name =n;
+//         marks = m;
+//     }
+
+//     int result(int m){
+//         if (m>=40){
+//             cout<<"Pass"<<endl;
+//         }
+//         else{
+//             cout<<"Fail"<<endl;
+//         }
+//     }
+//     int getinfo1(){
+//         return marks;
+//     }
+//     string getinfo2(){
+//         return name;
+//     }
+// };
+// int main(){
+//     Student s1("Tanveer", 50);
+//     cout << s1.getinfo2() << endl;
+//     cout << s1.getinfo1() << endl;
+//     s1.result(50);
+// }
+
+//consonants in a string
+// #include <iostream>
+// #include <string.h>
+// using namespace std;
+// int main(){
+//     string str;
+//     cin>>str;
+//     int length = str.length();
+//     int count = 0;
+//     for(int i =0;str[i]!='\0';i++){
+//         if (str[i] != 'a' && str[i] != 'e' && str[i] != 'i' && str[i] != 'o' && str[i] != 'u' &&
+//             str[i] != 'A' && str[i] != 'E' && str[i] != 'I' && str[i] != 'O' && str[i] != 'U') {
+//             count++;
+//         }
+//     }
+//     cout<<count;
+// }
+
+//armstrong
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main(){
+    int n, rem, digits= 0, sum= 0;
+    cin>>n;
+    int temp = n;
+    while(temp!=0){
+        temp=temp/10;
+        digits++;
+    }
+    temp = n;
+    while(temp!=0){
+        int digit = temp%10;
+        sum += (int)round(pow(digit, digits));
+        temp/=10;
+    }
+    if(sum == n){
+        cout<<"armstrong";
+    }
+    else{
+        cout<<"No";
+    }
+}
